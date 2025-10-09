@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "materialize-css": "^1.0.0-rc.2"
   }

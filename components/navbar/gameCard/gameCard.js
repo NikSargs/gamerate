@@ -1,0 +1,5 @@
+
+
+class gameCard extends HTMLElement {
+
+}

@@ -1,0 +1,24 @@
+const navbarTemplate = document.createElement("template");
+navbarTemplate.innerHTML = `
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+`
+
+class Navbar extends HTMLElement {
+    constructor() {
+        super()
+    }
+    connectedCallback() {
+        this.append(navbarTemplate.content.cloneNode(true));
+    }
+}
+
+customElements.define("navbar-component", Navbar);

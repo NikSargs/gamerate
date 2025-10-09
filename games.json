@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "name": "GTA 5",
+        "slug": "gta-v",
+        "description": "Open world game",
+        "score": 4.9
+    },
+    {
+        "id": 1,
+        "name": "The Witcher 3",
+        "slug": "the-witcher-3",
+        "description": "Fantasy RPG with an open world",
+        "score": 4.8
+    },
+    {
+        "id": 2,
+        "name": "Red Dead Redemption 2",
+        "slug": "red-dead-redemption-2",
+        "description": "Western action-adventure game",
+        "score": 4.9
+    },
+    {
+        "id": 3,
+        "name": "Cyberpunk 2077",
+        "slug": "cyberpunk-2077",
+        "description": "Futuristic open-world RPG",
+        "score": 4.2
+    },
+    {
+        "id": 4,
+        "name": "Minecraft",
+        "slug": "minecraft",
+        "description": "Sandbox building game",
+        "score": 4.7
+    },
+    {
+        "id": 5,
+        "name": "Assassin's Creed Valhalla",
+        "slug": "assassins-creed-valhalla",
+        "description": "Action RPG set in the Viking era",
+        "score": 4.5
+    }
+]
