@@ -42,6 +42,16 @@
             cardDescription.textContent = games[i].description;
             cardContent.appendChild(cardDescription);
 
+            const cardScoreContainer = document.createElement("div");
+            const cardScoreImage = new Image(30, 30);
+            const cardScore = document.createElement("span");
+            cardScore.textContent = games[i].score;
+            cardScoreImage.src = "../images/star-symbol-icon.svg"
+            cardScoreContainer.appendChild(cardScoreImage);
+            cardContent.appendChild(cardScoreContainer);
+            cardScoreContainer.appendChild(cardScore);
+            
+
             const cardAction = document.createElement("div");
             cardAction.classList.add("card-action");
             card.appendChild(cardAction);

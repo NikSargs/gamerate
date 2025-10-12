@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="../../node_modules/materialize-css/dist/css/materialize.min.css">
+      <script src="../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+      <script src="../components/navbar/navbar.js"></script>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <navbar-component></navbar-component>
+        <div class="container">
+          <h1>Game name</h1>
+        </div>
+    </body>
+  </html>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="Module">
+    let url = window.location;
+    let params = new URLSearchParams(url.search);
+    let game = params.get('game');
+
+    console.log(game);
+  </script>
