@@ -4,6 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" href="../../node_modules/materialize-css/dist/css/materialize.min.css">
+      <link rel="stylesheet" href="../css/style.css">
       <script src="../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
       <script src="../components/navbar/navbar.js"></script>
 
@@ -13,7 +14,19 @@
     <body>
       <navbar-component></navbar-component>
         <div class="container">
-          <h1>Game name</h1>
+          <div class="row">
+            <div class="col s10">
+              <h1 id="gameName">Game name</h1>
+              <p id="gameDescription">asd</p>
+            </div>
+            <div class="col s2">
+              <div class="score-container">
+                <img class="score-img" src="../images/star-symbol-icon.svg" alt="">
+                <span id="gameScore">Score</span>
+              </div>          
+            </div>
+          </div>
+          
         </div>
     </body>
   </html>
@@ -22,7 +35,31 @@
   <script type="Module">
     let url = window.location;
     let params = new URLSearchParams(url.search);
-    let game = params.get('game');
+    let gameSlug = params.get('game');
+    
+    async function getGames() {
+        try {
+            const response = await axios.get('http://localhost:3000/games.json');
+            let games = response.data;
 
-    console.log(game);
+            let game = games.find(item => item.slug == gameSlug);
+            fillGameData(game);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    function fillGameData(gameData) {
+      console.log(gameData);
+      let gameName = document.getElementById("gameName");
+      gameName.textContent = gameData.name;
+
+      let gameDescription = document.getElementById("gameDescription");
+      gameDescription.textContent = gameData.description;
+
+      let gameScore = document.getElementById("gameScore");
+      gameScore.textContent = gameData.
+    }
+
+    getGames();
   </script>
